@@ -2,13 +2,21 @@
 # -*- coding: utf-8 -*-
 
 import numpy as np
+import math
 
 def sigmoid(x1, x2, a = 1.0):
     y = 1.0 / (1.0 + np.exp(- (x1 - x2)))
     return y
 
+def basic(x1, x2, a = 5):
+    if np.fabs(x1 - x2) >= 5:
+        y = 1.0
+    else:
+        y = 0.0
+    return y
 
-def mapping(data, f = sigmoid):
+
+def mapping(data, f = basic):
     map = []
     for i in range(len(data)):
         x = []
