@@ -8,11 +8,8 @@ def sigmoid(x1, x2, a = 1.0):
     y = 1.0 / (1.0 + np.exp(- (x1 - x2)))
     return y
 
-def basic(x1, x2, a = 5):
-    if np.fabs(x1 - x2) >= 5:
-        y = 1.0
-    else:
-        y = 0.0
+def basic(x1, x2, a = 1.0):
+    y = 1.0 - np.exp(- np.fabs(x1 -x2))
     return y
 
 
