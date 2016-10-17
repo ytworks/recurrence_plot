@@ -13,12 +13,12 @@ def basic(x1, x2, a = 1.0):
     return y
 
 
-def mapping(data, f = basic):
+def mapping(data, a = 1, f = basic):
     map = []
     for i in range(len(data)):
         x = []
         for j in range(len(data)):
-            x.append(int(255 * f(data[i], data[j])))
+            x.append(int(255 * f(data[i], data[j], a = a)))
         map.append(x)
 
     map = np.array(map)
