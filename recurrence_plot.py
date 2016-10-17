@@ -19,7 +19,7 @@ def distance(x1, x2, a = 1.0):
         y = 0.0
     return y
 
-def mapping(data, a = 1, f = distance):
+def mapping(data, a = 1, f = basic):
     map = []
     for i in range(len(data)):
         x = []
