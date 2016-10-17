@@ -9,7 +9,7 @@ def sigmoid(x1, x2, a = 1.0):
     return y
 
 def basic(x1, x2, a = 1.0):
-    y = 1.0 - np.exp(- a * np.fabs(x1 -x2))
+    y = np.exp(- a * np.fabs(x1 -x2))
     return y
 
 
