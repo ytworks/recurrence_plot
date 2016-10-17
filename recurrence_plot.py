@@ -12,8 +12,14 @@ def basic(x1, x2, a = 1.0):
     y = np.exp(- a * np.fabs(x1 -x2))
     return y
 
+def distance(x1, x2, a = 1.0):
+    if np.fabs(x1 -x2) >= a:
+        y = 1.0
+    else:
+        y = 0.0
+    return y
 
-def mapping(data, a = 1, f = basic):
+def mapping(data, a = 1, f = distance):
     map = []
     for i in range(len(data)):
         x = []
