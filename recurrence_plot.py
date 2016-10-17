@@ -13,7 +13,7 @@ def basic(x1, x2, a = 1.0):
     return y
 
 def distance(x1, x2, a = 1.0):
-    if np.fabs(x1 -x2) >= a:
+    if np.fabs(x1 -x2) <= a:
         y = 1.0
     else:
         y = 0.0
