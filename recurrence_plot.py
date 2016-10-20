@@ -24,7 +24,7 @@ def mapping(data, a = 1, f = basic):
     for i in range(len(data)):
         x = []
         for j in range(len(data)):
-            x.append(int(255 * f(data[i], data[j], a = a)))
+            x.append(float(255 * f(data[i], data[j], a = a)))
         map.append(x)
 
     map = np.array(map)
